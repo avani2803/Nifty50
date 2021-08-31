@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- {% load static %} -->
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Nifty 50</title>
+  
+</head>
+
+
+<body style="background-color: rgba(7, 54, 48, 0.781);padding-top: 1cm;">
+
+    {% for i in data %}
+      <div style="background-color: white;border-radius: 5%; float:left;
+      /* width:280px;
+      height:260px; */
+      background-color:white;
+      border:solid black;margin-left:30px; margin-bottom: 30px; padding: 10px; " >
+      <div style="border: solid black; text-align: center;">
+        <h1 style="color: rgb(102, 102, 207);">{{i.symbol}}</h1>
+    </div>
+        <h4 style="color: rgb(95, 167, 196);">Open Price     : {{i.openPrice}}</h4>
+        <h4 style="color: rgb(95, 167, 196);">High Price     :{{i.highPrice}}</h4>
+        <h4 style="color: rgb(95, 167, 196);">Low Price      :{{i.lowPrice}}</h4>
+        <h4 style="color: rgb(95, 167, 196);">Previous Price :{{i.previousPrice}}</h4>
+        <h4 style="color: rgb(95, 167, 196);">Net Price      :{{i.netPrice}}</h4>    
+      </div>    
+    {% endfor %}
+</body>
+
+</html>
